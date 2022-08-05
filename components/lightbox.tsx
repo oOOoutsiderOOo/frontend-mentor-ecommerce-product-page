@@ -3,10 +3,10 @@ import { MouseEvent, useEffect, useRef } from "react";
 export default function Lightbox(props: {
     setLbVisible: (arg0: boolean) => void;
     picture: number;
-    lbVisible: unknown;
+    lbVisible: boolean;
     setPicture: (arg0: number) => void;
 }) {
-    const lb: any = useRef(null);
+    const lb = useRef<HTMLDivElement>(null);
 
     const handleClose = () => {
         props.setLbVisible(false);
@@ -14,7 +14,7 @@ export default function Lightbox(props: {
     };
 
     useEffect(() => {
-        lb.current.classList.toggle("hidden");
+        props.lbVisible === true ? lb.current?.classList.remove("hidden") : lb.current?.classList.add("hidden");
     }, [props.lbVisible]);
 
     const handleSelectPicture = (e: any) => {
