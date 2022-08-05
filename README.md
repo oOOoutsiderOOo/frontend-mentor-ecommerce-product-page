@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [GitHub repo](https://github.com/oOOoutsiderOOo/frontend-mentor-url-shortening)
--   Live Site URL: [Vercel](https://frontend-mentor-url-shortening-git-main-ooooutsiderooo.vercel.app/)
+-   Solution URL: [GitHub repo](https://github.com/oOOoutsiderOOo/frontend-mentor-ecommerce-product-page)
+-   Live Site URL: [Vercel](https://frontend-mentor-ecommerce-product-page-git-main-ooooutsiderooo.vercel.app/)
 
 ### Built with
 
@@ -42,7 +42,6 @@ Users should be able to:
 -   Typescript
 -   [React](https://reactjs.org/) - JS library
 -   [Next.js](https://nextjs.org/) - React framework
--   [Framer motion](https://www.framer.com/motion/) - Animation library
 
 ## Author
 
