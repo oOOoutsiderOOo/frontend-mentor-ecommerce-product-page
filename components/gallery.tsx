@@ -1,7 +1,7 @@
 import { MouseEvent, ReactElement } from "react";
 import { useState } from "react";
 
-function Gallery(props: { picture: any; setPicture: (arg0: number) => void; setLbVisible: (arg0: string) => void }) {
+function Gallery(props: { picture: any; setPicture: (arg0: number) => void; setLbVisible: (arg0: boolean) => void }) {
     const handleSelectPicture = (e: any) => {
         document.getElementById(`${props.picture}`)?.classList.remove("selected");
         props.setPicture(Number(e.currentTarget.attributes.id.value));
@@ -9,7 +9,7 @@ function Gallery(props: { picture: any; setPicture: (arg0: number) => void; setL
     };
 
     const openLightbox = () => {
-        props.setLbVisible("true");
+        props.setLbVisible(true);
     };
 
     return (
