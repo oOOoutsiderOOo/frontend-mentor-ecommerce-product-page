@@ -1,12 +1,11 @@
 import { MouseEvent, ReactElement } from "react";
 import { useState } from "react";
 
-function Gallery(props: any) {
-    const handleSelectPicture = (e: MouseEvent<HTMLImageElement, MouseEvent>) => {
+function Gallery(props: { picture: any; setPicture: (arg0: number) => void; setLbVisible: (arg0: string) => void }) {
+    const handleSelectPicture = (e: any) => {
         document.getElementById(`${props.picture}`)?.classList.remove("selected");
-        props.setPicture(Number(e.target.attributes.id.value));
-        e.target.classList.add("selected");
-        console.log(e);
+        props.setPicture(Number(e.currentTarget.attributes.id.value));
+        e.currentTarget.classList.add("selected");
     };
 
     const openLightbox = () => {
@@ -20,16 +19,16 @@ function Gallery(props: any) {
             </div>
             <div className="photo-selector">
                 <div className="photo">
-                    <img src="/images/image-product-1-thumbnail.jpg" alt="" id={1} onClick={e => handleSelectPicture(e)} />
+                    <img src="/images/image-product-1-thumbnail.jpg" alt="" id={"1"} onClick={e => handleSelectPicture(e)} />
                 </div>
                 <div className="photo">
-                    <img src="/images/image-product-2-thumbnail.jpg" alt="" id={2} onClick={e => handleSelectPicture(e)} />
+                    <img src="/images/image-product-2-thumbnail.jpg" alt="" id={"2"} onClick={e => handleSelectPicture(e)} />
                 </div>
                 <div className="photo">
-                    <img src="/images/image-product-3-thumbnail.jpg" alt="" id={3} onClick={e => handleSelectPicture(e)} />
+                    <img src="/images/image-product-3-thumbnail.jpg" alt="" id={"3"} onClick={e => handleSelectPicture(e)} />
                 </div>
                 <div className="photo">
-                    <img src="/images/image-product-4-thumbnail.jpg" alt="" id={4} onClick={e => handleSelectPicture(e)} />
+                    <img src="/images/image-product-4-thumbnail.jpg" alt="" id={"4"} onClick={e => handleSelectPicture(e)} />
                 </div>
             </div>
         </div>

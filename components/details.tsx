@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Details(props) {
-    const handleAmount = e => {
+export default function Details(props: { setAmount: (arg0: number) => void; amount: number; setCartAmount: (arg0: any) => void; cartAmount: any }) {
+    const handleAmount = (e: any) => {
         e.target.id === "more" ? props.setAmount(props.amount + 1) : props.amount !== 0 ? props.setAmount(props.amount - 1) : null;
     };
 

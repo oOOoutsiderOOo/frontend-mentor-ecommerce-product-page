@@ -1,4 +1,6 @@
-export default function Cart(props) {
+import { ReactElement, JSXElementConstructor, ReactFragment } from "react";
+
+export default function Cart(props: { setCartAmount: (arg0: number) => void; setShowCart: (arg0: boolean) => void; cartAmount: number }) {
     const handleCheckout = () => {
         props.setCartAmount(0);
     };

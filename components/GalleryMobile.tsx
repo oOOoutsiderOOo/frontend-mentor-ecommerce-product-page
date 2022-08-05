@@ -1,4 +1,4 @@
-export default function GalleryMobile(props) {
+export default function GalleryMobile(props: { picture: number; setPicture: (arg0: number) => any }) {
     const nextPic = () => {
         props.picture === 4 ? props.setPicture(1) : props.setPicture(props.picture + 1);
     };

@@ -1,7 +1,12 @@
-import { useEffect, useRef } from "react";
+import { MouseEvent, useEffect, useRef } from "react";
 
-export default function Lightbox(props) {
-    const lb = useRef(null);
+export default function Lightbox(props: {
+    setLbVisible: (arg0: boolean) => void;
+    picture: number;
+    lbVisible: unknown;
+    setPicture: (arg0: number) => void;
+}) {
+    const lb: any = useRef(null);
 
     const handleClose = () => {
         props.setLbVisible(false);
@@ -12,7 +17,7 @@ export default function Lightbox(props) {
         lb.current.classList.toggle("hidden");
     }, [props.lbVisible]);
 
-    const handleSelectPicture = (e: MouseEvent<HTMLImageElement, MouseEvent>) => {
+    const handleSelectPicture = (e: any) => {
         document.getElementById(`${props.picture}b`)?.classList.remove("selected");
         props.setPicture(Number(e.target.attributes.id.value[0]));
         e.target.classList.add("selected");

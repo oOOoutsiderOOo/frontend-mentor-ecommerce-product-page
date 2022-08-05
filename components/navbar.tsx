@@ -1,9 +1,9 @@
-import { useState, useRef } from "react";
+import { useState, useRef, JSXElementConstructor, ReactElement, ReactFragment, MutableRefObject } from "react";
 import Cart from "../components/Cart";
 
-function Navbar(props) {
+function Navbar(props: { cartAmount: number; setCartAmount: (arg0: number) => void }) {
     const [showCart, setShowCart] = useState(false);
-    const mobileMenu = useRef(null);
+    const mobileMenu: MutableRefObject<any> = useRef(null);
 
     const openMenu = () => {
         mobileMenu.current.classList.remove("hidden");
